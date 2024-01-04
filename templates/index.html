@@ -42,12 +42,14 @@
     <div class="container mt-5">
         <h1 class="mb-4">Spam Detection App</h1>
 
-        <div class="form-group">
-            <label for="comment">Enter your comment:</label>
-            <input type="text" class="form-control" id="comment" required>
-        </div>
+        <form onsubmit="detectSpam(); return false;">
+            <div class="form-group">
+                <label for="comment">Enter your comment:</label>
+                <input type="text" class="form-control" id="comment" required>
+            </div>
 
-        <button class="btn btn-primary" onclick="detectSpam()">Detect Spam</button>
+            <button type="submit" class="btn btn-primary">Detect Spam</button>
+        </form>
 
         <div class="mt-4" id="result"></div>
     </div>
